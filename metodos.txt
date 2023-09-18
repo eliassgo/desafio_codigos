@@ -1,5 +1,14 @@
 
-## Método Concate 
+Método Reapeat 
+
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+repeatStr = (n, s) => s.repeat(n)
+
+
+Método Concate 
 [ 🏀 , 🏀 , 🏀 ].concat( [ ⚾ , ⚾ ] ) => [🏀 , 🏀 , 🏀, ⚾ , ⚾ ]
 O método concat junta dois (ou mais) arrays em um novo array, sem alterar os já existentes.
 
@@ -26,6 +35,12 @@ Método .indexOf( )
 O método indexOf retorna o primeiro índice encontrado de um valor especificado. 
 Se o valor não for encontrado o método retorna -1.
 
+***   
+EX: 
+function findNeedle(haystack) {
+  return "found the needle at position " + haystack.indexOf("needle");
+}
+**
 Método .reverse( )
 [ ⚾ ,🏈, ⚽, 🏀 ].reverse( ) => [🏀, ⚽,🏈, ⚾]
 O método reverse inverte a ordem dos elementos de um array e substitui o array original.
@@ -65,7 +80,8 @@ Método .splice( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].splice( 1, 2, 🎱 ) ⇒ [⚾ ,🎱, 🏀, 🏐 ]
  [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].splice( 2, 3) ⇒ [⚾, 🏈 ]
 Com o método splice conseguimos escolher um índice inicial e 
-final para substituirmos valores no lugar deles. E também podemos remover itens, no segundo exemplo, foram removidos três elementos a partir da posição dois.
+final para substituirmos valores no lugar deles. E também podemos remover itens, no segundo exemplo, 
+foram removidos três elementos a partir da posição dois.
 
 Método .length( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].length(3) ⇒ ⚾ , 🏈, ⚽ [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].length() ⇒ 5
@@ -89,7 +105,9 @@ Método .find( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].find( bola ⇒ bola.formato === “redonda” ) => ⚾
 O método find é utilizado para procurar um elemento dentro do array que 
 atenda a condição atribuída a ele, que retornará o primeiro elemento encontrado. 
-Ele percorre todo o array buscando o elemento que atenda a condição e retorna o primeiro que foi encontrado, caso não encontre retorna undefined. Este método não executa caso o array esteja vazio e não altera o array original
+Ele percorre todo o array buscando o elemento que atenda a condição e retorna
+ o primeiro que foi encontrado, caso não encontre retorna undefined. 
+ Este método não executa caso o array esteja vazio e não altera o array original
 
 Método .at( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].at(-1) ⇒ 🏐 / [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].at(1) ⇒ 🏈
