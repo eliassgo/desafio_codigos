@@ -1,6 +1,24 @@
+Transformar em string: String(n)
+
+
+Método split
+function abbrevName(name){
+// Começa separando em dois elementos de arrays o nome e o sobrenome. 
+Como o nome e o sobre estão seprados por espaços, o método split(“ “) 
+separa em dois elementos o elemento que está separado por vírgula.
+  var nameArray = name.split(" ");
+// Aqui pega a primeira letra do elemento[0], e a primeira letra do elemento[1], e junta com um ponto. 
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
+
+
+Método Replace 
+function noSpace(x){
+    return x.replace(/\s+/g, '')
+  }
+
 
 Método Reapeat 
-
 function repeatStr (n, s) {
   return s.repeat(n);
 }
@@ -62,8 +80,13 @@ Método .join( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].join() ⇒ ⚾,🏈,⚽,🏀,🏐 
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].join(‘ ’) ⇒ ⚾🏈⚽🏀🏐 
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].join(‘-’) ⇒ ⚾-🏈-⚽-🏀-🏐
-O método join puxa elementos de um array e lista no formato de string, 
-o resultado da operação puxou as propriedades do array e as listou de acordo com o que foi determinado.
+O método join uni os elementos de um array no formato de uma string. 
+A condição será o que separará os elementos do array
+
+// Essa função inverte os elementos de um array, ex (hello) => (olleh)
+function solution(str){
+  return str.split("").reverse().join("")
+}
 
 Método .shift( )
 [⚽, 🏐 , 🏐 , 🏐, 🏐].shift( ) ⇒[🏐 , 🏐 , 🏐, 🏐]
@@ -91,10 +114,25 @@ Método .sort( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].sort() ⇒ ⚽,⚾,🏀,🏈,🏐
 O método sort ordena os elementos do próprio array e retorna o array.
  A ordenação padrão é de acordo com a pontuação de código unicode.
+let numeros = [10, 5, 8, 1, 3];
+numeros.sort((a, b) => b - a); => Resultado: [10, 8, 5, 3, 1]
+numeros.sort((a, b) => a - b); => Resultado: [1, 3, 5, 8, 10]
+
+ class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    args.sort((a,b) => a - b)
+    return args[0]
+  }
+}
 
 Método .toString( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].toString ⇒ ⚾,🏈,⚽,🏀,🏐
 O método toString retorna uma string com todos os valores do array separados por vírgulas.
+
+function numberToString(num) {
+  // Return a string of the number here!
+  return num.toString()
+}
 
 Método .findIndex( )
 [ ⚾ , 🏈, ⚽, 🏀, 🏐 ].findIndex(emoji => emoji === “⚽”) ⇒ 2
@@ -138,11 +176,29 @@ O método map usa uma função callback de teste e executa ela para cada element
  retornando um novo array modificado. 
 Não executa a função de callback para arrays vazios.
 
+EX: 
+  function squareSum(numbers){
+  let squareNumbers = numbers.map((num) => num**2)
+  return squareNumbers.reduce((a,b) => a + b, 0)
+}
+
 Método .forEach( )
 [🏀, 🏀,🏀,🏀 ].forEach( ( bola ) ⇒ { console.log( bola + ⚽)} ) => 🏀⚽🏀⚽🏀⚽
 O método forEach usa uma função callback e executa ela para cada elemento do array. 
 Não executa a função de callback para arrays vazios e não retorna um novo array, diferente do método map.
-
+{
+  Não retorna um novo arrau, ou seja, não pode fazer:
+  errado: let numbersSoma = number.forEach((num) => num**2) // Iso está errado Pois ele modifica definitivament o array
+  correto: numbers.forEach((num) => num**2)
+function squareSum(numbers){
+  let soma = 0; 
+  numbers.forEach((num) => {
+    soma += num**2
+  })
+  return soma; 
+}
+  arr.forEach((num) => { num > 0 ? soma+= num : soma+=0})
+}
 Método .copyWithin( )
 [ ⚾ , 🏈, ⚽, 🏀 ].copyWithin(2,0) ⇒ [ ⚾ , 🏈, ⚾ , 🏈 ]
 O método copyWithin copia os elementos do array para outra posição no array, 
@@ -156,6 +212,12 @@ Método .reduce( )
 [ 🥦, 🍅, 🥕, 🍆 ].reduce((valor, elemento) => valor + elemento, 0)) ⇒ 🥗
 O método reduce executa uma função redutora para o elemento array, ele retorna um único valor que é o resultado acumulado da função.
  Ele não executa a função para elementos de array vazios e não altera a matriz original.
+
+function squareSum(numbers){
+  return numbers.reduce(function(sum, n){
+    return (n*n) + sum;
+  }, 0)
+}
 
  Método .valueOf( )
 [ ⚽, ⚾ , 🏀, 🏐 ].valueOf() ⇒ [ ⚽, ⚾ , 🏀, 🏐 ]

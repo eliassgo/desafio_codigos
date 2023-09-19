@@ -111,7 +111,6 @@ function numberToString(num) {
 
 
 // Somando apenas os números positivos
-
 function positiveSum (arr) { 
   return arr.filter(x => x>=0).reduce((a, c) => a + c, 0);
   }
