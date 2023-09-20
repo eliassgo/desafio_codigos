@@ -1,0 +1,79 @@
+
+// Number:
+// A função Number converte seu argumento em um valor numérico, 
+// seja ele uma string ou outro tipo de dado. 
+// Retorna NaN (Not-a-Number) se a conversão não for possível.
+  
+// parseInt:
+// A função parseInt analisa uma string e retorna um número inteiro com base no conteúdo da string. Ela permite especificar uma base numérica (como 10 para decimal ou 16 para hexadecimal) para a conversão.
+
+// parseFloat:
+// A função parseFloat analisa uma string e r
+// etorna um número de ponto flutuante (número decimal)
+//  com base no conteúdo da string.
+
+// s => Number(s):
+// Uma função anônima que recebe um argumento 's' e o 
+// converte em um valor numérico usando a função Number. 
+// Retorna NaN se a conversão não for possível.
+
+// s => parseInt(s):
+// Uma função anônima que recebe uma string 
+// 's' e a converte em um número inteiro usando a 
+// função parseInt. Pode especificar uma base numérica 
+// como segundo argumento, se necessário.
+
+// s => parseFloat(s):
+// Uma função anônima que recebe uma string 's' e a 
+// converte em um número de ponto flutuante usando a função parseFloat.
+
+// s => Math.floor(s):
+// Uma função anônima que recebe um número 's' e o arredonda 
+// para baixo para o inteiro mais próximo usando a função Math.floor.
+
+// s => Math.round(s):
+// Uma função anônima que recebe um número 's' e o arredonda para o 
+// inteiro mais próximo usando a função Math.round.
+
+// s => Math.ceil(s):
+// Uma função anônima que recebe um número 's' e o arredonda para 
+// cima para o inteiro mais próximo usando a função Math.ceil.
+
+// s => Math.min(s):
+// Uma função anônima que recebe um ou mais argumentos numéricos 's' 
+// e retorna o valor mínimo entre eles usando a função Math.min.
+
+// s => Math.max(s):
+// Uma função anônima que recebe um ou mais argumentos numéricos 
+// 's' e retorna o valor máximo entre eles usando a função Math.max.
+
+// Math.floor:
+// A função Math.floor arredonda um número para baixo para o inteiro mais próximo.
+
+function highAndLow(numbers){
+    // Transformar os números em um array de números
+    var numbersArr = numbers.split(' ').map(Number); 
+    
+    // Encontrar o menor e o maior número
+    var smallestNumber = Math.min(...numbersArr)
+
+    var highestNumber = Math.max(...numbersArr)
+  
+    return highestNumber + ' ' + smallestNumber; 
+  }
+
+function litres(time) {
+  return Math.floor(time * 0.5)
+}
+
+// Math.round:
+// A função Math.round arredonda um número para o inteiro mais próximo.
+
+// Math.ceil:
+// A função Math.ceil arredonda um número para cima para o inteiro mais próximo.
+
+// Math.min:
+// A função Math.min retorna o valor mínimo entre dois ou mais números.
+
+// Math.max:
+// A função Math.max retorna o valor máximo entre dois ou mais números.

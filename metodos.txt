@@ -170,6 +170,11 @@ Método .filter( )
 O método filter usa uma função callback de teste e executa ela para cada elemento do array. Ele retorna 
 um novo array com os elementos que passarem no teste.
 
+function filter_list(l) {
+  // Return a new array with the strings filtered out
+  return l.filter((item) => { return typeof item === 'number'})
+}
+
 Método .map( )
 [🏀, 🏀,🏀,🏀 ].map( console.log(( bola ) ⇒ { return 🏈 }) ) => [ 🏈, 🏈, 🏈, 🏈 ]
 O método map usa uma função callback de teste e executa ela para cada elemento do array,
