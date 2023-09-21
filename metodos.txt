@@ -1,7 +1,7 @@
 Transformar em string: String(n)
 
 
-Método split
+Método split => PARA STRINGS
 function abbrevName(name){
 // Começa separando em dois elementos de arrays o nome e o sobrenome. 
 Como o nome e o sobre estão seprados por espaços, o método split(“ “) 
@@ -43,6 +43,13 @@ Método .includes()
 [ ⚾ , 🏈, ⚽, 🏀 ].includes( ⚽ ) => true
 O método includes verifica se um elemento está contido em um array e retorna true 
 se o elemento estiver contido ou false caso contrário.
+
+function check(a, x) {
+  // your code here
+  // Percorrer o array a e verificar se tem algo igual a x
+  // Retornar true se tiver e retornar false se não tiver
+  return a.includes(x)
+}
 
 Método .fill( )
 [ ⚾ , 🏈, ⚽, 🏀 ].fill( ⚽, 1 ) => [ ⚾ , ⚽, ⚽, 🏀 ] [ ⚾ , 🏈, ⚽, 🏀 ].fill( ⚽ ) => [ ⚽, ⚽, ⚽, ⚽ ]
