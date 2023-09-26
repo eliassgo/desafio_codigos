@@ -233,7 +233,8 @@ function squareSum(numbers){
 
  Método .valueOf( )
 [ ⚽, ⚾ , 🏀, 🏐 ].valueOf() ⇒ [ ⚽, ⚾ , 🏀, 🏐 ]
-O método valueOf é usado para retornar o array. É um método padrão do objeto Array. Este método retorna todos os itens na mesma matriz. 
+O método valueOf é usado para retornar o array. 
+É um método padrão do objeto Array. Este método retorna todos os itens na mesma matriz. 
 Ele não altera o conteúdo original da matriz e não contém nenhum valor de parâmetro.
 
 Método .lastIndexOf( )
