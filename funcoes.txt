@@ -77,3 +77,10 @@ function litres(time) {
 
 // Math.max:
 // A função Math.max retorna o valor máximo entre dois ou mais números.
+
+
+//toUpperCase()
+// Transformar uma string em maiúscula; 
+
+//toLowerCase()
+// Transformar uma string em minúscula; 
